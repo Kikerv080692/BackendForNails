@@ -1,9 +1,9 @@
 const Schedule = require('../../models/schedule')
 
 const getByDate = async (req, res) => {
-    const {_id} = req.user
     const {days, month} = req.query
-    let query = {owner: _id}
+    let query = {}
+
     if(days){
         query.days = days
     }
