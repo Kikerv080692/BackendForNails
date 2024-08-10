@@ -19,6 +19,10 @@ const scheduleDbSchema = Schema(
         type: String,
         required: [true, "month is required"],
     },
+    booked: {
+      type: Boolean,
+      default: false,
+    },
     owner: {
       type: Schema.Types.ObjectId,
       ref: "user",
